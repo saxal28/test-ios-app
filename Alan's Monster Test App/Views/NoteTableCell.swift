@@ -11,10 +11,15 @@ import UIKit
 class NoteTableCell: UITableViewCell {
     
     @IBOutlet weak var noteTitle: UILabel!
+    @IBOutlet weak var noteContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        noteContainer.layer.shadowColor = UIColor.darkGray.cgColor
+        noteContainer.layer.shadowOpacity = 0.3
+        noteContainer.layer.shadowOffset = CGSize.zero
+        noteContainer.layer.shadowRadius = 3
         
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Note {
+struct Note: Codable {
     
     var title = ""
     var body = ""

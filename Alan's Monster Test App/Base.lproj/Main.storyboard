@@ -62,7 +62,7 @@
                                             <constraint firstAttribute="height" constant="60" id="S8r-Q5-veh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                        <state key="normal" title="Notes">
+                                        <state key="normal" title="Live Text">
                                             <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -76,14 +76,14 @@
                                     <constraint firstAttribute="width" constant="150" id="tOh-sP-XsC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuck Bitches." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h84-ED-AYK">
-                                <rect key="frame" x="136" y="313.5" width="103" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Have 0 Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h84-ED-AYK">
+                                <rect key="frame" x="87" y="313.5" width="202" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Money." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-qe-nei">
-                                <rect key="frame" x="136" y="342" width="103" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Temperature Recorded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-qe-nei">
+                                <rect key="frame" x="87" y="342" width="202" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,6 +106,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="POS App" id="WVa-vn-szp"/>
+                    <connections>
+                        <outlet property="LabelOne" destination="h84-ED-AYK" id="gg7-5F-R0s"/>
+                        <outlet property="LabelTwo" destination="zMy-qe-nei" id="IPp-fc-MvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +158,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="noteContainer" destination="Nz4-lq-15t" id="evi-SF-0YI"/>
                                             <outlet property="noteTitle" destination="6D9-aB-N4C" id="D0X-qS-kLY"/>
                                         </connections>
                                     </tableViewCell>

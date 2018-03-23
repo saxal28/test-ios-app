@@ -8,9 +8,21 @@
 
 import UIKit
 
+
+protocol TodoHomeVCDelegate {
+    
+    func getNoteCount(count: Int)
+    
+}
+
+
 class TodoHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let Service = NoteService.instance
+    
+    var delegate: TodoHomeVCDelegate?
+    
+    var numberChanged = 0;
 
     
     //=====================================================
@@ -36,7 +48,6 @@ class TodoHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        print("Add Note Touched")
         showAddNoteModal()
     }
 
@@ -89,6 +100,7 @@ class TodoHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func addNote(note: Note) {
         Service.saveNote(note: note);
+        delegate?.getNoteCount(count: Service.getNotes().count)
         notesTable.reloadData()
     }
 
